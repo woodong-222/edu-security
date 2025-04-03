@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be A Fool Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="upper-section">
+        <header>
+            <div class="logo">BCSD Security</div>
+            <div class="auth-section">
+                <a href="#loginModal" class="login">Login</a>
+                <a href="#signupModal" class="signup">Sign up</a>
+            </div>
+        </header>
+
+        <!-- 메인 화면 텍스트 -->
+        <div class="title-section">
+            <div class="subtitle">2025 Beginner</div>
+            <h1 class="huge-title">Be A Fool</h1>
+            <p class="large-text">Be more creative</p>
+        </div>
+
+        <footer>
+            <button>assignment 1</button>
+            <button>assignment 2</button>
+            <button>assignment 3</button>
+            <button>assignment 4</button>
+        </footer>
+
+        <!-- 로그인 모달 -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">x</a>
+                <div class="modal-layout">
+                    <div class="image-section">
+                        <img src="C:/BCSD/Be_a_Fool/image.jpg" alt="Modal-left-Image" class="modal-image">
+                    </div>
+                    <div class="form-section">
+                        <h2>Login</h2>
+                        <form>
+                            <label for="username">Username</label><br>
+                            <input type="text" id="username" name="username" required placeholder="Id"
+                                onfocus="this.placeholder=''" onblur="this.placeholder='Id'"><br><br>
+                            <label for="password">Password</label><br>
+                            <input type="password" id="password" name="password" required placeholder="Password"
+                                onfocus="this.placeholder=''" onblur="this.placeholder='Password'"><br>
+                            <a href="#">Forgot Id?</a>
+                            <a href="#">Forgot Password?</a>
+                            <br><br>
+                            <a href="#">Sign up</a>
+                            <br><br>
+                            <button type="submit">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 회원가입 모달 -->
+        <div id="signupModal" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">x</a>
+                <div class="modal-layout">
+                    <div class="image-section">
+                        <img src="C:/BCSD/Be_a_Fool/image.jpg" alt="Modal-left-Image" class="modal-image">
+                    </div>
+                    <div class="form-section">
+                        <h2>Sign up</h2>
+                        <form>
+                            <label for="new-username">Id</label><br>
+                            <input type="text" id="new-username" name="new-username" required placeholder="Id"><br><br>
+                            <label for="new-password">Password</label><br>
+                            <input type="password" id="new-password" name="new-password" required
+                                placeholder="Password"><br><br>
+                            <label for="recheck-password">Recheck Password</label><br>
+                            <input type="password" id="recheck-password" name="recheck-password" required
+                                placeholder="Recheck Password"><br><br>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
