@@ -1,0 +1,28 @@
+body{
+    padding:100px;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+.container{
+    text-align: center;
+}
+
+.button-style{
+    display:flex;
+    flex-direction: column;
+    width:450px;
+}
+
+button{
+    padding:20px;
+    border:none;
+    color: rgb(0, 169, 163);
+    background-color: white;
+    border: 2px solid black;
+}
+
+button:hover{
+    background-color: black;
+}
