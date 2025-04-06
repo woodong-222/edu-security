@@ -1,5 +1,3 @@
-# edu-security
-
 # Security_이상민
 
 ## 3주차
