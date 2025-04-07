@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        button 
+        { /* 로그인 버튼 색 설정*/
+        background-color: turquoise;
+        color: white;
+        } 
+
+        .center-text, .form, .checkbox, .link
+        { /*문자열, 입력폼, 체크박스, 링크 중앙 정렬*/
+            text-align: center;
+            /* 체크박스와 링크는 중앙 정렬되지 않는다...*/
+        }
+
+        .write
+        { /*박스 크기 조정*/
+            height: 25px;
+        }
+        
+    </style>
+    <!-- <link rel="stylesheet" href="loginPage.css"> -->
+    <meta charset="UTF-8">
+    <title>Login page</title>
+</head>
+<body>
+    <h1>MyPage</h1>
+    <hr> <!--가로 줄-->
+
+    <h2 class="center-text">로그인</h2>
+    <p class="center-text">당신은 누구십니까?</p>
+    <p class="center-text">먼저 서비스 이용을 위해 로그인 해주세요</p>
+
+    <form class="form"> <!--아이디와 비밀번호, 로그인 버튼 만들기(인라인)-->
+        <input style="width: 300px" class="write" type="text" placeholder="아이디를 입력해 주세요."><br><br>
+        <input style="width : 300px" class="write" type="password" placeholder="비밀번호를 입력해 주세요."><br><br>
+        <button style="width: 310px; height: 30px;" class="submit" type="submit">로그인</button>
+    </form>    
+
+    <br>
+    <input class="checkbox" type="checkbox" id="autoLogin"> <!--체크박스 구현-->
+    <label for="autoLogin"> 자동 로그인</label> <!--체크박스 이름 설정-->
+    <a class="link" href="findPw.html">비밀번호 찾기</a> <!--비밀번호 찾기 링크 구현-->
+</body>
+</html>
