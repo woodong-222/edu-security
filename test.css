@@ -1,0 +1,21 @@
+body {
+    background-color: aliceblue;
+}
+    .box{
+        background-color: red;
+        width: 200px;
+        padding: 20px;
+        margin: 10px;
+        border: 2px solid wheat;
+        text-align: center;
+
+    }
+    .div {
+        background-color: skyblue;
+        color: red;
+        width: 200px;
+        padding: 20px;
+        margin: 10px;
+        border: 2px solid navy;
+        text-align: center;
+    }

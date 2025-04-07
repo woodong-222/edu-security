@@ -1,0 +1,17 @@
+body {
+    background-color: skyblue;
+}
+    .box{
+        background-color: blue;
+        width: 90%;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+
+    }
+    .find-btn{
+        text-align: center;
+    }
+    .find-btn1{
+        display: inline-block;
+    }
