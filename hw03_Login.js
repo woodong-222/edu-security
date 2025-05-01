@@ -26,13 +26,13 @@ document.getElementById("login-form").addEventListener("submit", async function 
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      id: username,
+      username: username,
       password: hashedPassword
     })
   })
     .then(res => res.json())
     .then(data => {
-      if (data.success) {
+      if (data.message === "로그인 성공") {
         alert("로그인 성공");
         // 이후 페이지 이동 등 필요 시 여기에 추가
       } else {
