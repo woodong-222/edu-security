@@ -20,7 +20,7 @@ document.getElementById("login-form").addEventListener("submit", async function 
   const hashedPassword = await sha256(password); // 비밀번호 해시 처리
 
   // 서버로 로그인 정보 POST 요청
-  fetch("/login", {
+  fetch("http://localhost:8080/api/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
