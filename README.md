@@ -1,4 +1,11 @@
 # Security_강민구
+
+## 4주차
+
+### login page
+변경사항: 서버와 함께 움직일 수 있는 login js 코드 작성.
+-> 서버를 실행하고 MySQL DB에 ID와 해쉬 암호화 된 password가 저장돼있고, DB를 기준으로 login form 에서 ID와 password를 submit 하면 js 코드 파일에서 password를 해쉬 암호화 하고 서버로 부터 DB에 저장돼있는 해쉬 암호와 비교 후 로그인 성공 or 실패 return
+
 ## 3주차
 
 ### / page
