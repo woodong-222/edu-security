@@ -1,0 +1,31 @@
+body{
+    background-color: #353535;
+    text-align: center;
+    display: block;
+    max-width: 450px;
+    margin: 12% auto;
+}
+
+div{
+    background-color: #d9d9d9;
+    padding: 20px;
+}
+
+button{
+    background-color: #284b63;
+    width: 350px;
+    height: 30px;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+input{
+    width: 340px;
+    height: 20px;
+    margin-top: 5px;
+    text-align: center;
+}
+
