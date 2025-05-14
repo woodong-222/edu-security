@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>security</title>
+    <link rel="stylesheet" href="/3/assets/css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" name="username" placeholder="아이디 입력">
+            
+            <input type="password" id="password" name="password" placeholder="비밀번호 입력">
+            
+            <button type="button">Login</button>
+        </form>
+    </div>
+    
+    <script>
+        document.querySelector("button").addEventListener("click", async () => {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            try {
+                const response = await fetch("http://localhost:8080/api/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert("로그인 성공: " + data.message);
+                    window.location.href = "/index.html";
+                } else {
+                    alert("로그인 실패: " + data.message);
+                }
+            } catch (error) {
+                alert("서버 오류 발생");
+                console.error(error);
+            }
+        });
+    </script>
+</body>
+</html>

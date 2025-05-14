@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>security</title>
+    <link rel="stylesheet" href="/4/assets/css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" name="username" placeholder="아이디 입력">
+            <input type="password" id="password" name="password" placeholder="비밀번호 입력">
+            <button type="button">Login</button>
+        </form>
+    </div>
+    
+    <script>
+        async function sha256(message) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            return hashHex.toUpperCase();
+        }
+
+        document.querySelector("button").addEventListener("click", async () => {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            try {
+                const hashedPassword = await sha256(password);  // 비밀번호 해시 처리
+
+                const response = await fetch("http://localhost:8080/api/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ username, password: hashedPassword })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert("로그인 성공: " + data.message);
+                    window.location.href = "/4/index.html";
+                } else {
+                    alert("로그인 실패: " + data.message + hashedPassword);
+                }
+            } catch (error) {
+                alert("서버 오류 발생");
+                console.error(error);
+            }
+        });
+    </script>
+</body>
+</html>
